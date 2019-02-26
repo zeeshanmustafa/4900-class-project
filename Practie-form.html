@@ -1,91 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Registration Form</title>
+  <title>Sign up form</title>
+  <link rel="stylesheet" type="text/css" href="signup.css">
 </head>
 <body>
+  <form action="action_page.php" style="border:1px solid #ccc">
+  <div class="container">
+    <p>Please fill in this form to create an account.</p>
+    <hr>
 
-	<h1>Register</h1>
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
 
-	<form>
-<div>
-		<label for="firstName">First Name:</label>
-		<input name="firstName" id="firstName" type="text" placeholder="John" required>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
 
-		<label for="lastName">Last Name:</label>
-		<input name="lastName" id="lastName" type="text" placeholder="Smith" required>
-</div>
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
 
-<div>
-		<label for="male">Male</label>
-		<input id="male"type="radio" name="genderChoice" value="MALE">
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
 
-		<label for="female">Female</label>
-		<input id="female" type="radio" name="genderChoice" value="Female">
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
-		<label for="other">Other</label>
-		<input id="other" type="radio" name="genderChoice" value="other">
-</div>
-
-<div>
-
-	<label for="email">Email:</label>
-	<input id="email" name="email" type="email" placeholder="your email" required>
-
-	<label for="password">Password:</label>
-	<input id="password" name="password" type="password" pattern=".{5,10}" required title="5 to 10 characters">
-	
-</div>
-		
-<div>
-	<label for="Choice">Birthday:</label>
-	<select name="birthdayMonth" id="Choice">
-		<option value="months">Month</option>
-		<option>Jan</option>
-		<option>Feb</option>
-		<option>Mar</option>
-		<option>Apr</option>
-		<option>May</option>
-		<option>June</option>
-
-		</select>
-
-		<select>
-		<option value="Day">Day</option>
-		<option>01</option>
-		<option>02</option>
-		<option>03</option>
-		<option>04</option>
-		<option>05</option>
-		<option>06</option>
-
-	</select>
-<select>
-		<option value="Year">Year</option>
-		<option>1900</option>
-		<option>2000</option>
-		<option>2001</option>
-		<option>2002</option>
-		<option>2003</option>
-		<option>2004</option>
-
-		
-
-
-	</select>
-</div>
-
-<div>
-	<label for="agreed">I agree to the terms and conditions:</label>
-	<input id="agreed" name="agreed" type="checkbox">
-</div>
-<div>
-  <input type="Submit" value="Submit">
-</div>
-
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
 </form>
-
-	
 
 </body>
 </html>
